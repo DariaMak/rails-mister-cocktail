@@ -8,3 +8,16 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+
+
+require 'json'
+require 'open-uri'
+
+api_url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+
+open(api_url) do |stream|
+  quote = JSON.parse(stream.read)
+  puts quote['value']['joke']
+end
+
+puts(quote)

@@ -17,10 +17,10 @@
         <td><%= cocktail.name %></td>
         <!-- <td><%#= cocktail.banner_url %></td> -->
         <td><%= link_to 'Show', cocktail_path(cocktail) %></td>
-        <td><%= link_to 'New', new_cocktail_path(cocktail) %></td>
         <td><%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <td><%= link_to 'New', new_cocktail_path %></td>
   </tbody>
 </table>
 
