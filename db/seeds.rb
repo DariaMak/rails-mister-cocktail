@@ -9,7 +9,6 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-
 require 'json'
 require 'open-uri'
 
@@ -19,5 +18,3 @@ open(api_url) do |stream|
   quote = JSON.parse(stream.read)
   puts quote['value']['joke']
 end
-
-puts(quote)
