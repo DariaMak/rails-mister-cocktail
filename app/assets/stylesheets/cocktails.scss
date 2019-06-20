@@ -1,7 +1,33 @@
   h1 {
     font-size: 6.5rem;
-    color: darkgoldenrod;
+    color: white;
     }
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cocktail-page {
+  background-image: url();
+  background-size: cover;
+  height: 100vh;
+  // color: #eee;
+  text-align: left;
+  padding-top: 40vh;
+
+}
+
+.show {
+  a {
+  color: black !important;
+  }
+}
+
+.destroy {
+  a {
+    color: black !important;
+  }
+}
+
+.card {
+  height: 60vh;
+  white: 60vh;
+}

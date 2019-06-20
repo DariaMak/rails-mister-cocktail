@@ -1,8 +1,9 @@
 <!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%# image_url @garden.banner_url %>);">
   <div class="container"> -->
     <h1><%= @cocktail.name %></h1>
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
   <!-- </div> -->
-</div>
+</div class="cocktail-page">
 
 <div class="container mt-5">
   <div class="row">
