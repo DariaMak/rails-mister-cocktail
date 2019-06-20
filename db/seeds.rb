@@ -12,8 +12,9 @@ Ingredient.create(name: "mint leaves")
 require 'json'
 require 'open-uri'
 
-serialized_drink = open('https://unsplash.com/photos/OkvGjvyGNFc').read
+serialized_drink = open('https://images.unsplash.com/photos/OkvGjvyGNFc').read
 drinks = JSON.parse(serialized_drink)
 drinks['drinks'].each do |drink|
 Ingredient.create!(name: drink["strIngredient1"])
 end
+
