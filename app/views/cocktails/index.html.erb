@@ -5,15 +5,19 @@
   <body>
     <% @cocktails.each do |cocktail| %>
       <div clacc="container">
-        <div>
-           <%= cl_image_tag ("https://res.cloudinary.com/diimsd5lw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1561037700/hessam-hojati-1259232-unsplash_oxyeae.jpg") , width: 250, height: 250 %>
+            <div>
+              <%= cl_image_tag ("https://res.cloudinary.com/diimsd5lw/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1561037700/hessam-hojati-1259232-unsplash_oxyeae.jpg") , width: 250, height: 250 %>
+            </div>
+            <div class="centered" ><%= cocktail.name %></div>
+              <!-- <td><%#= cocktail.banner_url %></td> -->
+              <div class=".d-flex justify-content-between">
+                  <ul>
+                    <il class="show btn btn-light b.left"><%= link_to 'Show', cocktail_path(cocktail) %></il>
+                    <il class="destroy btn btn-light"><%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></il>
+                  </ul>
+              </div>
         </div>
-        <div class="centered" ><%= cocktail.name %></div>
-        <!-- <td><%#= cocktail.banner_url %></td> -->
-        <ul class=".d-flex justify-content-between" >
-          <il class="show btn btn-light b.left"><%= link_to 'Show', cocktail_path(cocktail) %></il>
-          <il class="destroy btn btn-light"><%= link_to 'Destroy', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></il>
-        </ul>
+      </div>
     <% end %>
     <td><%= link_to 'New', new_cocktail_path %></td>
   </body>
